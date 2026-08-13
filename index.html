@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Afsana Fried Chicken — Homepage</title>
+    
+    <!-- Tailwind CSS with custom plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#633f00",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdad5",
+                        "tertiary": "#4b4a4a",
+                        "on-background": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "secondary": "#835500",
+                        "on-surface-variant": "#5c403c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container": "#eeeeee",
+                        "on-primary-container": "#ffd5cf",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary-fixed": "#410001",
+                        "on-primary-fixed-variant": "#930005",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "inverse-primary": "#ffb4aa",
+                        "secondary-fixed": "#ffddb4",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#c41212",
+                        "primary": "#9a0006",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#be0b0e",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#e1dede",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed-dim": "#ffb955",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#636262",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary-container": "#6b4500",
+                        "outline-variant": "#e6bdb7",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "background": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-container": "#feae2c",
+                        "outline": "#916f6a",
+                        "surface-dim": "#dadada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "lg": "40px",
+                        "margin-desktop": "auto",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "margin-mobile": "20px",
+                        "md": "24px",
+                        "base": "8px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+
+    <!-- Transparent Top Navbar -->
+    <nav class="transparent-navbar fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="flex justify-between items-center h-20 px-6 md:px-xl max-w-[1280px] mx-auto">
+            <a class="nav-brand font-display-lg text-lg md:text-xl font-black tracking-tight flex items-center gap-2.5" href="#experience">
+                <span class="w-8 h-8 rounded-lg bg-amber-500 text-black flex items-center justify-center font-black text-xs shadow-md shadow-amber-500/30">AFC</span>
+                <span class="brand-name-text text-white transition-colors duration-300">Afsana Fried Chicken</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-white/80 hover:text-amber-400 font-bold text-sm tracking-wide transition-all hover:scale-105" href="#experience">Animation</a>
+                <a class="nav-link text-white/80 hover:text-amber-400 font-bold text-sm tracking-wide transition-all hover:scale-105" href="#menu">Menu</a>
+                <a class="nav-link text-white/80 hover:text-amber-400 font-bold text-sm tracking-wide transition-all hover:scale-105" href="#deals">Deals</a>
+                <a class="nav-link text-white/80 hover:text-amber-400 font-bold text-sm tracking-wide transition-all hover:scale-105" href="#locations">Locations</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#menu" class="hidden md:inline-flex bg-amber-500 text-black px-6 py-2.5 rounded-full font-extrabold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/25 hover:scale-105">
+                    Order Feast 🍗
+                </a>
+                <button id="open-cart-btn" class="text-amber-400 hover:bg-white/10 p-2.5 rounded-full transition-all relative flex items-center justify-center" title="View Cart">
+                    <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-black w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-all">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu-dropdown" class="hidden md:hidden bg-black/90 backdrop-blur-2xl border-b border-white/10 px-6 py-4 flex flex-col gap-3">
+            <a class="mobile-nav-link text-white hover:text-amber-400 font-bold text-base py-2 border-b border-white/10" href="#experience">Animation</a>
+            <a class="mobile-nav-link text-white hover:text-amber-400 font-bold text-base py-2 border-b border-white/10" href="#menu">Menu</a>
+            <a class="mobile-nav-link text-white hover:text-amber-400 font-bold text-base py-2 border-b border-white/10" href="#deals">Deals</a>
+            <a class="mobile-nav-link text-white hover:text-amber-400 font-bold text-base py-2" href="#locations">Locations</a>
+            <a href="#menu" class="bg-amber-500 text-black text-center font-extrabold py-3 rounded-full text-base hover:bg-amber-400 transition-all mt-2">
+                Order Feast 🍗
+            </a>
+        </div>
+    </nav>
+
+    <!-- Loading Screen -->
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-brand">
+                <i class="fa-solid fa-drumstick-bite loader-icon"></i>
+                <span class="brand-text">AFSANA</span>
+                <span class="brand-subtext">BUXI BAZAAR • CUTTACK</span>
+            </div>
+            <div class="loader-bar-container">
+                <div id="loader-bar" class="loader-bar"></div>
+            </div>
+            <div class="loader-status">
+                <span id="loader-percent">0%</span>
+                <span class="loader-label">Rendering 219 HD Frames...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20">
+        <!-- 1. 350VH STICKY SCROLL ANIMATION CONTAINER -->
+        <section class="hero-scroll-container relative w-full h-[350vh]" id="experience">
+            <div id="sticky-container" class="sticky top-0 w-full h-screen overflow-hidden">
+                <!-- Full-Bleed Canvas Background -->
+                <canvas id="scroll-canvas" class="animation-canvas absolute inset-0 w-full h-full object-cover z-1"></canvas>
+                
+                <!-- Dark Gradient Vignette for Text Contrast & Luxury Atmosphere -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60 pointer-events-none z-2"></div>
+
+                <!-- Hero Centered Overlay Card (Visible on 0% to 20% scroll) -->
+                <div id="hero-title-overlay" class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl px-4 text-center transition-all duration-500">
+                    <div class="bg-black/50 backdrop-blur-xl p-8 md:p-10 rounded-3xl border border-white/15 shadow-2xl flex flex-col items-center">
+                        <span class="inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 font-bold tracking-widest text-xs md:text-sm px-4 py-1.5 rounded-full mb-4 border border-amber-500/30">
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+                            BUXI BAZAAR • CUTTACK
+                        </span>
+                        <h1 class="font-display-lg text-4xl md:text-[56px] md:leading-[64px] text-white font-black mb-4 tracking-tight drop-shadow-xl">
+                            AFC - Afsana Fried Chicken
+                        </h1>
+                        <p class="hero-subheadline font-body-lg mb-8 max-w-xl mx-auto font-medium" style="color: #FFFFFF; font-size: 1.1rem; line-height: 1.5; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);">
+                            Hot, golden, wildly satisfying fried chicken. The kind of meal that turns a long day around.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="#menu" class="bg-amber-500 text-black font-extrabold px-8 py-3.5 rounded-full text-base hover:bg-amber-400 transition-all transform hover:-translate-y-1 shadow-lg shadow-amber-500/30 flex items-center gap-2">
+                                <span>Order Your Feast</span>
+                                <i class="fa-solid fa-drumstick-bite"></i>
+                            </a>
+                            <a href="#menu" class="border border-white/30 text-white font-bold px-8 py-3.5 rounded-full text-base hover:bg-white/10 transition-all backdrop-blur-md">
+                                See Menu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Synchronized Floating Story Overlay Cards -->
+                <div id="story-cards-container" class="absolute z-10 bottom-24 left-6 md:left-12 max-w-sm pointer-events-none transition-all duration-500 opacity-0 translate-y-4">
+                    <div id="story-card-1" class="story-card bg-black/75 backdrop-blur-xl border border-amber-500/40 p-6 rounded-2xl shadow-2xl text-white">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-amber-400 text-xs font-black tracking-widest uppercase" id="story-tag">01 / MARINADE</span>
+                            <span class="text-[10px] bg-amber-500/20 text-amber-300 font-bold px-2.5 py-0.5 rounded-full" id="story-badge">Step 1</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-amber-300 mb-2" id="story-title">11-Spice Secret Marinade</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed font-normal" id="story-desc">Fresh local chicken cutlets marinated for 12 hours in our aromatic house spice blend.</p>
+                    </div>
+                </div>
+
+                <!-- Floating Interactive Scrubber Control Bar (Hidden per user directive) -->
+                <div class="player-bar controls controls-bar absolute bottom-5 left-1/2 -translate-x-1/2 z-20 bg-black/80 backdrop-blur-xl border border-white/20 px-5 py-2.5 rounded-full flex items-center gap-4 text-white shadow-2xl max-w-lg w-[92%] md:w-auto" style="display: none !important;">
+                    <button id="play-pause-btn" class="w-10 h-10 rounded-full bg-amber-500 text-black flex items-center justify-center font-bold hover:bg-amber-400 transition-all transform active:scale-95 shadow-md shadow-amber-500/40 shrink-0" title="Play / Pause Animation">
+                        <i class="fa-solid fa-play" id="play-icon"></i>
+                    </button>
+                    <div class="flex flex-col flex-1 min-w-[130px] md:min-w-[200px]">
+                        <div class="flex justify-between items-center text-xs font-bold text-gray-300 mb-1">
+                            <span>Frame <strong id="current-frame-num" class="text-amber-400">1</strong> <span class="text-gray-500">/ 219</span></span>
+                            <span id="scroll-percent-text" class="text-amber-400 font-mono">0%</span>
+                        </div>
+                        <input type="range" id="frame-slider" min="1" max="219" value="1" class="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                    </div>
+                    <button id="sound-toggle-btn" class="w-9 h-9 rounded-full bg-white/10 text-amber-400 flex items-center justify-center hover:bg-white/20 transition-all shrink-0" title="Toggle Sizzle Sound">
+                        <i class="fa-solid fa-volume-xmark" id="sound-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STITCH EXPANDED DIGITAL MENU SECTION (Photorealistic Dish Cards) -->
+        <section class="py-xl bg-surface m-0 border-t-0" id="menu">
+            <div class="max-w-[1280px] mx-auto px-6 md:px-xl">
+                <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-lg font-bold">Explore Our Full Menu</h2>
+                
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-4 mb-lg border-b border-outline-variant/30 pb-4">
+                    <button class="menu-tab-btn active text-primary font-bold border-b-2 border-primary pb-2 px-4 font-label-md" data-category="all">All</button>
+                    <button class="menu-tab-btn text-on-surface-variant hover:text-primary transition-colors pb-2 px-4 font-label-md" data-category="chicken">Fried Chicken</button>
+                    <button class="menu-tab-btn text-on-surface-variant hover:text-primary transition-colors pb-2 px-4 font-label-md" data-category="burgers">Burgers</button>
+                    <button class="menu-tab-btn text-on-surface-variant hover:text-primary transition-colors pb-2 px-4 font-label-md" data-category="wraps">Wraps</button>
+                    <button class="menu-tab-btn text-on-surface-variant hover:text-primary transition-colors pb-2 px-4 font-label-md" data-category="combos">Combos</button>
+                    <button class="menu-tab-btn text-on-surface-variant hover:text-primary transition-colors pb-2 px-4 font-label-md" data-category="beverages">Beverages</button>
+                </div>
+
+                <!-- Stitch Menu Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-md" id="menu-grid">
+                    
+                    <!-- Item 1: Hot & Crispy Chicken (2 Pcs) -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="chicken">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Hot &amp; Crispy Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKRPuLrSXnH_KZCKfh43kxVnX3QqVpWzJAS9vvOKazP9LWBTC7OQz3vNf5rst-idLeQyH9X_QX_f6WKfkXeKhsbFVIlenulwqme_Q9nJysIGXCYIsq2qiDfv-R9ALz1n1YzVZPFBP74XwcclVeNv7a5-FLmYTylxMpMJwI3hUcOk7cXf0FIkpjKbxWpBDcj6c8VJNEKhdClZAkm3Ll3HL4L87pblrwe2n_mjuXmaryceM51wZ4Mtev2g"/>
+                            <span class="absolute top-2 left-2 bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase">BESTSELLER</span>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Hot &amp; Crispy Chicken (2 Pcs)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Double-dredged extra-crispy fried chicken pieces.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹149</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Hot &amp; Crispy Chicken (2 Pcs)" data-price="149">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Hot & Crispy Bucket (6 Pcs) -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="chicken">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Hot &amp; Crispy Bucket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6MeSSJRuFqnr5UAKuUff0D0TpQhUJ8oIyn9oeQSUYLrg9AXQw6fLUxIMC4QZyIgy4geDF18HUaSUjlfpKGiM01Q9Cv9p7jZHdNV29QlAQOEyFSfJIUV-3IFIhu4BjjlOH44463fCJPoOerIEDYnfO7CIMvUoR87uNPr7I5r_qnyooVX1NikW8nzFbtlsSP5A-NhTShsnvLWZS5lMnSB__E6syxatu7hNv7e2BdgecUg2cH7S9HAF9Zw"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Hot &amp; Crispy Bucket (6 Pcs)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">A large bucket of signature extra-crunchy golden fried chicken.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹429</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Hot &amp; Crispy Bucket (6 Pcs)" data-price="429">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Fiery Hot Wings (6 pcs) -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="chicken">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Fiery Hot Wings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAop4eRdCzZ8bBDuCJf3Ewm_GTcHv6rtptyVV3ykHdqP4XbKEOyd-JHh3je4hTSELg8e0KnbE2sejQGHH2c3brPR3fkcwSRh589xISJQAGHDM5L85hz8AbyI8QQ0wtBx9oQl14nF7VCehNeYwr_8ncOD1PR5fvKTkNIGwOLA0ZfYbtfL3fIF6ps3Tb2ZeCG5XoaCp2AsYgkxBS4F3sBEQUtHMJblZsnq0m9YGxHP_z1oWnEEfxGVtvFA"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Fiery Hot Wings (6 pcs)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Crispy spicy chicken wings tossed in house seasoning.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹179</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Fiery Hot Wings (6 pcs)" data-price="179">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Fried & Grilled Lollipops (6 pcs) -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="chicken">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Fried &amp; Grilled Lollipops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTpx8H_PpoTMWsNfd2mbHoY9enxe5cZ_P-sJtjEbeTqhVhd_88lfdUywcVsyFhSH2CVsLxd5Xz2VNQUxSC5JtYlGxu9c0uZ7LJxgFX2B45lu1o8I1vaVDoDpNNLK6GZU0v71LpPJ-bhhmo6RcCVzGclhUTPw9VMn_GTl4JXkeFpL9SViHbT6Q3pdfBpjLXdGiX70ZHemWOCSTbfoxaTATiBCnOIWkLrZf8yciPBwv1inMEcc_EQvxwJQ"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Fried &amp; Grilled Lollipops (6 pcs)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Juicy chicken drumette lollipops fried to a golden crunch.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹199</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Fried &amp; Grilled Lollipops (6 pcs)" data-price="199">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Crispy Chicken Strips (6 pcs) -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="chicken">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Crispy Chicken Strips" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3byw6CwPPycZ3WtPDMAM2SjAZG6AmzcvveDe71Z--QOfLcD9W7jKFU0TwTfh5Q5uVd8b3Z4KXAIw6Q0gDr9-F6B5qVp_FicnYGtyq_FNrdNBxCTakizC1Q8QoIqpJnyUUoDe3ZTmF3ni1KPWaISBh9W3SrymUQb-NmV3G1jomHx-OztafQ9gz20AWpuNz-Z-tYrdJhn5xth8HZrTtvxoZ2zDLATz2TVW_gAA4_gpPYxKaSb9NqR5IDQ"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Crispy Chicken Strips (6 pcs)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">100% boneless tender chicken breast strips.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹199</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Crispy Chicken Strips (6 pcs)" data-price="199">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Crispy Chicken Popcorn (Large) -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="chicken">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Crispy Chicken Popcorn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKfdthpuUgvfIOyELMQ2e-94BYeZ89GFQxc_S9HMzK7TZ0qUBDaWK_Jz0WcGM-0YMoSqxTrPny4LpUPG3KUtixrf0snfbO3DJ4meeyjnEGGpP2wy17sAFwZAGP3vwqD5fAix8nwnuOFy3BreHP09mGvlFbx0v0YsYNGCFC6CnSXgPjkQniYZr4-LchX68y851e8NSv0i5dhvJravpk3poY3pFcLbSOUmLGP9WXKf1kzoRu5qQTVIhD8g"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Crispy Chicken Popcorn (Large)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Bite-sized crunchy chicken popcorn nuggets.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹149</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Crispy Chicken Popcorn (Large)" data-price="149">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 7: Chicken Crunchy Burger -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="burgers">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Chicken Crunchy Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5u6FKaEscusRI6BrDDzoLH42p2Qr3O8RD6eMRl64_P_I10xAkSg3JSTdYun9dJQGyxPKOyZKVgSHJG7duakIPaLZBVdoq16wasqrIMSSVfUuw17Eouw7c5zTODUVs7TGdbE5MZy4nNOYJxJhErhsW6LuMPqSQI8IZx_7hlRBwugsPLioYU9qOqIbKagXHuzBiu30WwHoRznZ9oBVaoG9vsPGEoJeyXjJ7B1K79UpyRUZi_YAdC3cV6A"/>
+                            <span class="absolute top-2 left-2 bg-primary text-on-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase">BESTSELLER</span>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Chicken Crunchy Burger</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Crispy chicken patty with melted cheese and fresh lettuce.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹89</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Chicken Crunchy Burger" data-price="89">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 8: Jumbo Double Decker Burger -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="burgers">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Jumbo Double Decker Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxBeFqCI71kKVBKK23tTzYz_R5d2bnfjWQRLALWqpC0IUUVgysGSNHVLnRGiAUekWbQOVo4Z-gkru2Fm2ywCDIleNE683TD_Kz_WQ7GnvtmwUgtj5BdXZ3_hImyT2PlEmHiUgxPsiAl1YofoPBOg0qnUs2-0dpeKjFnCFsyDZidx0GnQGgBryYzagk28DkTQNonvc92rFVCvwcBAWRr1FsSrehK9ywFCuSvgY8UitQFtj2BzRsfDbo1g"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Jumbo Double Decker Burger</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Tall jumbo burger with two crispy patties and signature sauce.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹129</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Jumbo Double Decker Burger" data-price="129">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 9: Crispy Chicken Wrap -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="wraps">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Crispy Chicken Wrap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7fnFZ2hc7VK1ElyFyfX5_QQTu2f6KbO_6ngpwVRWZImqTCop95rxw_Pv4bxOLe-XqT6pp3DEecDb11N_c040cCw5zsbzXtdfU2lmDLyG9sSVWxfBEOV_T3YEH1AuZyWDnXGcbRYAsZfRc5P9iKb3Uw-AXipsqvCSijGVfoE8Vx2AA50T3lKVEnXtfGUr9NHk66_e9XJa4VEJJ7mTKoEs80WWNVH9Z53A7Tc8go77NF9XS3UYVQT92KA"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Crispy Chicken Wrap</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Warm tortilla with crunchy tenders and white mayo.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹129</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Crispy Chicken Wrap" data-price="129">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 10: Paneer Special Wrap -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="wraps">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Paneer Special Wrap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgt5MZ1wRtepBh2xMJjymUsFU65DmXO-PYDXzekrqArJ1UDFUezM2JMgyuYamoYkI7WeSWoRdCyEGpHKywUV0pRcym5AXHEby0KS24EPQTiA3uBiT9ROeKWXGFektROK28cEvS-eZ9T7cGEQhHNHcbBsaxrH7LqjaxXvaGwe_-TB1keqphLWdXIGdCCa1VUwmBfcB0RREQUuOgUvsIHibmbDchdVVhII9H_MiumLkiyMbkWSuFrp8SnQ"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Paneer Special Wrap</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Spiced paneer with fresh crisp vegetables in a warm tortilla.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹129</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Paneer Special Wrap" data-price="129">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 11: Peri Peri French Fries -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="combos">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Peri Peri French Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKonW15NjZVn1Bo8akfQjVv7v22hGcmCQi2xTjbkF8Z7dXqAEB7G2G-JWurT-GvguD6jc78l8TKyihXOV8LwEPJT0qOWSFxTJ7V5zKGzQ7nHUaXCmZdY9WLM3rpMOQBGgbYnMzt50ixeXQ8Il3CXLXKyNwSY0csbvPtHyHteEJ2fEtar1BibpnDacKCvXWNNdC6f9z3jMKQ5fJrHOPltp-CxmJAv1BxLK_L7j6saJdm3InwqbR0sVUTA"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Peri Peri French Fries (Large)</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Seasoned fries dusted red peri-peri spice rub.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹129</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Peri Peri French Fries" data-price="129">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 12: Mint Lime Mojito -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="beverages">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Mint Lime Mojito" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjZyfucfLpqYlP-GSoHDW8Bgrd7eSvP0VSH1-Mt7Ov4YS7o55mOYqUJIaPYrDMhmwoeOJqpw6_o9KCL3xF-dKuGZNZoDGGMjpMaxG1VgBxCZiiTKWpMylnlkZi1OFrJCDZxkMWxIcT48zkpo6llRznd-nBHrbpAXnIii1F0gVzgitWA880TVLcH6SHVje7P-vkJb-9wUCkWHyNIl9mBeCYuBYZlMc6r4fj9w5E4wgN-VzxfnbtpRbLMw"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Mint Lime Mojito</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Refreshing mint lime mojito with fresh mint and lime wedges.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹99</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Mint Lime Mojito" data-price="99">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 13: Choco Fudge Cold Coffee -->
+                    <div class="menu-item-card bg-white rounded-lg overflow-hidden shadow-sm border border-outline-variant/20 flex flex-col group" data-cat="beverages">
+                        <div class="relative aspect-square overflow-hidden">
+                            <img alt="Choco Fudge Cold Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVeRxGT90ircmgwA160yTvNumJUVyjX9o2ioSQvtd7N2kL7kRWWqYWiOyWcn3JB4mUCw-D20SUwuErGb6IkW82_cUMgd20zhEyb-lJSNfETtU0jcRTmVPZrZTIUf0O3PDAh9aNZIGW5TdXOUnLxOsAXJlMytLBjpKkBAT1cxkbmK-Nb56Ql1Gsj6ME4i4BbYPurIE3Wda7TIHBoI9QzTKKvAaYfPxkwJcZ_3QS3Ojzf8tecqTlLtrlQA"/>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-on-surface mb-1">Choco Fudge Cold Coffee</h3>
+                            <p class="text-sm text-on-surface-variant mb-4 flex-grow">Creamy choco fudge cold coffee with chocolate syrup swirl.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xl font-bold text-primary">₹129</span>
+                                <button class="add-to-cart-btn bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-surface-tint transition-colors" data-name="Choco Fudge Cold Coffee" data-price="129">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FEATURED SPECIAL OFFER SECTION -->
+        <section class="py-xl bg-surface-container-low" id="deals">
+            <div class="max-w-[1280px] mx-auto px-6 md:px-xl">
+                <div class="bg-white rounded-[24px] overflow-hidden shadow-md flex flex-col md:flex-row border border-outline-variant/20">
+                    <div class="md:w-1/2 p-lg md:p-xl flex flex-col justify-center">
+                        <span class="inline-block px-3 py-1 bg-secondary text-white font-bold rounded-full font-label-md text-sm mb-4 self-start">Special Offer</span>
+                        <h2 class="font-serif text-display-lg text-primary font-bold mb-4">Special Meal Deal</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Enjoy 4 pcs Hot &amp; Crispy Chicken, 4 pcs Lollipop, 4 pcs Hot Wings, 4 pcs Chicken Strips, 1 Regular Popcorn, and 2 Cold Drinks.</p>
+                        <div class="flex items-center gap-4 mb-8"><span class="text-3xl font-bold text-primary">₹799</span></div>
+                        <button class="add-to-cart-btn bg-primary text-white px-8 py-3 rounded-full font-bold font-headline-md text-headline-md hover:bg-surface-tint hover:shadow-lg transition-all w-fit" data-name="Special Meal Deal (₹799)" data-price="799">Order Now</button>
+                    </div>
+                    <div class="md:w-1/2 relative min-h-[300px]">
+                        <img class="absolute inset-0 w-full h-full object-cover" data-alt="A large branded bucket overflowing with crispy fried chicken" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoih2iitMt0X6vgb75mynH95bjF8aVCltmZmPfKcm1TfxeaC_e1Uskc0LykqqnqnucvzqbfGGCe2YJ85jkPerqba8wkzX63c8st8Nnw_HIF_uZz1ROFuOJ5tbCO4KD9DsaWmFlznK58SLAMArwDxsL2S0UI2o2VZjG8CqAGFxpCt8IlrDWWKCxlluNjs8pa9NBxZJxl1-GDA3Rs0STCYOczliUhXXQfPOz_-c1-ksggmcjnsbHzvHxnw">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Shared Component) -->
+    <footer class="w-full py-xl mt-xl bg-[#1A1A1A] text-white/90" id="locations">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-xl mb-lg">
+                <!-- Column 1: Visit & Contact Us -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="font-display-lg text-headline-md font-extrabold text-white">AFC - Afsana Fried Chicken</h3>
+                    <p class="text-primary font-bold italic">Crispy in Every Bite</p>
+                    <div class="flex flex-col gap-2 font-body-md text-white/70">
+                        <div class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <span>Baropathar Rd, Buxi Bazaar, Kataka, Odisha 753001</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            <span>+91 6372384379</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">schedule</span>
+                            <span>Open Daily: 10:30 AM – 10:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Service Options -->
+                <div>
+                    <h4 class="font-headline-md text-white mb-6">How To Order / Services</h4>
+                    <ul class="grid grid-cols-1 gap-3">
+                        <li class="flex items-center gap-2 text-white/70">
+                            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Dine-in
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Drive-through
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> No-contact delivery
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Takeaway
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Kerbside pickup
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <span class="material-symbols-outlined text-sm text-primary">check_circle</span> Free street parking
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Find Us On Map -->
+                <div class="flex flex-col">
+                    <h4 class="font-headline-md text-white mb-6">Location Map</h4>
+                    <div class="w-full h-48 rounded-xl overflow-hidden border border-white/10">
+                        <iframe src="https://maps.google.com/maps?q=AFC%20-%20AFSANA%20FRIED%20CHICKEN%20Baropathar%20Rd%20Buxi%20Bazaar%20Cuttack%20Odisha%20753001&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="100%" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 font-label-md">
+                <p>© 2026 AFC - Afsana Fried Chicken. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span class="text-white/20">|</span>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHOPPING CART MODAL DRAWER -->
+    <div id="cart-modal" class="modal-backdrop">
+        <div class="modal-drawer">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Your Crispy Order</h3>
+                <button id="close-cart-btn" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="modal-body" id="cart-items-container">
+                <div class="text-center py-12 text-gray-400" id="empty-cart-msg">
+                    <i class="fa-solid fa-drumstick-bite text-5xl mb-4 opacity-30 text-amber-500"></i>
+                    <p>Your cart is empty.</p>
+                    <p class="text-xs text-gray-500 mt-1">Add items from the menu to proceed!</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="promo-box">
+                    <input type="text" id="promo-input" placeholder="Promo code (e.g. CRISPY10)"/>
+                    <button id="apply-promo-btn" class="secondary-btn">Apply</button>
+                </div>
+
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">₹0.00</span>
+                    </div>
+                    <div class="summary-row discount-row hidden" id="discount-row">
+                        <span>Discount (10% Off)</span>
+                        <span id="cart-discount">-₹0.00</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <strong id="cart-total">₹0.00</strong>
+                    </div>
+                </div>
+
+                <button id="checkout-btn" class="primary-btn full lg mt-6">
+                    Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toast-message">Item added to cart!</span>
+    </div>
+
+    <!-- MAIN APP SCRIPT -->
+    <script src="app.js"></script>
+</body>
+</html>
